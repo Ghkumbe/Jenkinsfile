@@ -5,7 +5,7 @@ pipeline {
     }
     stages{
         stage('sonarqube scan'){
-        agent {Jenkinsfile true}
+        //agent {Jenkinsfile true}
           steps{
                 withSonarQubeEnv('sonarserver'){ 
               sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Ghkumbe_week16C'
