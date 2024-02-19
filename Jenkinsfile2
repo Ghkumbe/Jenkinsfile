@@ -30,14 +30,14 @@ pipeline {
         }
         stage('image build'){
            steps{
-                sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 076892551558.dkr.ecr.us-east-1.amazonaws.com '
+                sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 185882989056.dkr.ecr.us-east-1.amazonaws.com '
                 sh 'docker build -t geoapp .'
             }
         }
         stage('push image'){
             steps{
-                sh 'docker tag geoapp:latest 076892551558.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
-                sh 'docker push 076892551558.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
+                sh 'docker tag geoapp:latest 185882989056.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
+                sh 'docker push 185882989056.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
 
             }
         }
