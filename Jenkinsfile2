@@ -24,7 +24,7 @@ pipeline {
             steps{
 
                 sh 'curl -uadmin:AP5mZ1TGxbfJg5s8o7m1rRSRP4i -T target/bio*.jar \
-                 "http://34.227.20.142:8081/artifactory/devops/"' 
+                 "http://34.227.20.142:8081/artifactory/dev/"' 
                 
             }
         }
