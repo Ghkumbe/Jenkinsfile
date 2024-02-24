@@ -39,8 +39,8 @@ pipeline {
         stage('push image') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'aws_jenkins', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                    sh 'docker tag geoapp:latest 972859692008.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
-                    sh 'docker push 972859692008.dkr.ecr.us-east-1.amazonaws.com/geoapp:latest'
+                    sh 'docker tag geoapp:latest 972859692008.dkr.ecr.us-east-1.amazonaws.com/geoapp:${BUILD_ID}'
+                    sh 'docker push 972859692008.dkr.ecr.us-east-1.amazonaws.com/geoapp:lat${BUILD_ID}'
                 }
             }
         }
