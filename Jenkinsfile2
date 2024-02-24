@@ -24,7 +24,7 @@ pipeline {
         stage('upload artifact') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'aws_jenkins', usernameVariable: 'AWS_ACCESS_KEY_ID', passwordVariable: 'AWS_SECRET_ACCESS_KEY')]) {
-                    sh 'curl -u $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY -T target/bio*.jar "http://54.166.19.31:8081/artifactory/geoapp/"' 
+                    sh 'curl -u $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY -T target/bio*.jar "http://3.84.47.206:8081/artifactory/geoapp/"' 
                 }
             }
         }
