@@ -12,7 +12,7 @@ pipeline {
             }
             steps {
                 withSonarQubeEnv('sonarserver') { 
-                    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Ghkumbe_week16C'
+                    sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Ghkumbe'
                 }
             }
         }
